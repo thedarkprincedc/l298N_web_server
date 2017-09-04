@@ -15,6 +15,8 @@ import { RemoteControlViewComponent } from "./remote-view";
 import { VideoViewComponent } from "./video-view";
 import { AboutViewComponent } from "./about-view";
 
+import { BluetoothService } from './services/bluetooth.service';
+
 const appRoutes: Routes = [
   { path: 'bluetooth', component: BluetoothViewComponent },
   { path: 'remote', component: RemoteControlViewComponent },
@@ -48,7 +50,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [BluetoothService],
   bootstrap: [AppComponent]
 })
 

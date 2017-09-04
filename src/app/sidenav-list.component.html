@@ -1,6 +1,9 @@
-<md-card *ngFor="let item of menuitems" (click)="onItemClick(item)" [ngClass]="{'titleStyles': item.name == selecteditem.name}" routerLink="/{{item.link}}" >
-    <i class="material-icons" style="vertical-align: middle;">{{item.icon}}</i>
-    <span [style.vertical-align]="'middle'">
-        {{item.name}}
-    </span>
+<md-card *ngFor="let item of menuitems" 
+    (click)="onItemClick(item)" 
+    [ngClass]="{'titleStyles': '/' + item.link == router.url}" 
+    routerLink="/{{item.link}}" >
+        <i class="material-icons" style="vertical-align: middle;">{{item.icon}}</i>
+        <span [style.vertical-align]="'middle'">
+            {{item.name}}
+        </span>
 </md-card>

@@ -25,6 +25,23 @@ export class AppComponent {
     icon: 'info',
     link: 'about'
   }];
+  bluetoothdevicelist = [
+    {
+      name: "PS3 GamePad",
+      deviceid: "00:00:33:23",
+      connected: true
+    },
+    {
+      name: "Device 2",
+      deviceid: "00:00:33:23",
+      connected: true
+    },
+    {
+      name: "Device 4",
+      deviceid: "00:00:33:23",
+      connected: true
+    }
+  ];
   
   
 }

@@ -1,3 +1,15 @@
-<div>
-fnffnj
-</div>
+<md-list>
+    <h3 md-subheader>Devices</h3>
+    <md-list-item *ngFor="let item of devices" 
+        [mdMenuTriggerFor]="appMenu"
+        (click)="selecteddevice=item"
+        [ngClass]="{'success' : item.connected == true}">
+        <md-icon md-list-icon>folder</md-icon>
+        <h4 md-line>{{item.name}}</h4>
+        <p md-line> {{item.deviceid}} {{(item.connected)?"(Paired)":""}}</p>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-menu #appMenu="mdMenu">
+        <button md-menu-item (click)="onItemClick(selecteddevice)"> {{ (selecteddevice.connected)? "Disconnect" : "Connect" }} </button>
+    </md-menu>
+</md-list>

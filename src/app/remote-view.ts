@@ -6,5 +6,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class RemoteControlViewComponent {
-  
+  onKey = function(event){
+    console.log(event);
+  }
 }
