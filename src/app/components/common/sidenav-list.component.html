@@ -1,6 +1,7 @@
 <md-card *ngFor="let item of menuitems" 
     (click)="onItemClick(item)" 
-    [ngClass]="{'titleStyles': '/' + item.link == router.url}" 
+    [ngClass]="{'selected': '/' + item.link == router.url}"
+    [ngStyle]="{opacity : ('/' + item.link == router.url)? 1 : 0.4}" 
     routerLink="/{{item.link}}" >
         <i class="material-icons" style="vertical-align: middle;">{{item.icon}}</i>
         <span [style.vertical-align]="'middle'">

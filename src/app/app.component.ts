@@ -8,6 +8,7 @@ import { Component, SimpleChanges } from '@angular/core';
 export class AppComponent {
   title = 'app';
   selecteditem = {};
+  opened = true;
   menuitems = [{
     name: 'Bluetooth',
     icon: 'bluetooth',
@@ -16,6 +17,10 @@ export class AppComponent {
     name: 'Remote Control',
     icon: 'settings_remote',
     link: 'remote'
+  },{
+    name: 'Automated Control',
+    icon: 'android',
+    link: 'automation'
   },{
     name: 'Video',
     icon: 'videocam',
@@ -42,6 +47,5 @@ export class AppComponent {
       connected: true
     }
   ];
-  
   
 }

@@ -18,9 +18,9 @@ export class BluetoothService{
             //this.socket.emit('send', {msg, usr, frq: this.frq });
         });
     }
-    send(msg: string){
-        if(msg.length){
-            this.socket.emit('bluetooth', {msg});
+    send(msg: Object){
+        if(msg){
+            this.socket.emit('bluetooth', msg);
         }
     }
     listen(event: string): Observable<any> {

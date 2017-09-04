@@ -6,5 +6,8 @@ import { Component, Input } from '@angular/core';
 })
 
 export class AboutViewComponent {
-  
+  vm = {
+    name: "PiDroneL295N",
+    createdby: "thedarkprincedc"
+  }
 }

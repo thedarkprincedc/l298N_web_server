@@ -1,9 +1,12 @@
 <md-sidenav-container>
-  <md-sidenav mode="side" opened="true">
+  <md-sidenav mode="side" opened="opened" style="width: 25vw;" #sidenav>
     <sidenavlist [menuitems]="menuitems" [selecteditem]="selecteditem"></sidenavlist>
   </md-sidenav>
   <div class="my-content">
     <router-outlet></router-outlet>
+    <button class="fullscreen-btn" md-fab (click)="sidenav.toggle()">
+        <i class="material-icons">{{(sidenav.opened) ? "fullscreen_exit" : "fullscreen"}}</i>
+    </button>
   </div>
 </md-sidenav-container>
   

@@ -2,8 +2,18 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'sidenavlist',
-  templateUrl: './sidenav-list.component.html'
+    selector: 'sidenavlist',
+    templateUrl: './sidenav-list.component.html',
+    styles: [`
+        *{
+            outline-style: none;
+        }
+        .selected {
+            color: red;
+            border-left: 5px red solid;
+            background-color:#F6F6FF;
+        },
+    `],
 })
 
 export class SidenavListComponent {

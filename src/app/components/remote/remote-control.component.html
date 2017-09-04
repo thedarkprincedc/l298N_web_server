@@ -1,0 +1,15 @@
+<div>
+    <form class="example-form">
+        <md-form-field class="example-full-width">
+            <input mdInput placeholder="Duty CycleA" value="100">
+        </md-form-field><br/>
+        <md-form-field class="example-full-width">
+            <input mdInput placeholder="Duty CycleB" value="100">
+        </md-form-field>
+    </form>
+    <hr/>
+    <button md-raised-button (click)="forward()">Move Forward</button>
+    <button md-raised-button (click)="backward()">Move Backward</button>
+    <button md-raised-button (click)="rotate('ccw')">Rotate CCW</button>
+    <button md-raised-button (click)="rotate('cw')">Rotate CW</button>
+</div>

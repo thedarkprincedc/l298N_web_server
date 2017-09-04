@@ -8,13 +8,14 @@ import 'hammerjs';
 import { MdButtonModule, MdCardModule, MdMenuModule,
   MdToolbarModule, MdIconModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
-import { SidenavListComponent } from "./sidenav-list.component"
+import { SidenavListComponent } from "./components/common/sidenav-list.component"
+import { RemoteControlComponent } from "./components/remote/remote-control.component"
 
-import { BluetoothViewComponent } from "./bluetooth-view";
-import { RemoteControlViewComponent } from "./remote-view";
-import { VideoViewComponent } from "./video-view";
-import { AboutViewComponent } from "./about-view";
-
+import { BluetoothViewComponent } from "./views/bluetooth-view";
+import { RemoteControlViewComponent } from "./views/remote-view";
+import { VideoViewComponent } from "./views/video-view";
+import { AboutViewComponent } from "./views/about-view";
+import { AutomatedViewComponent } from "./views/automated-view";
 import { BluetoothService } from './services/bluetooth.service';
 
 const appRoutes: Routes = [
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   { path: 'remote', component: RemoteControlViewComponent },
   { path: 'video', component: VideoViewComponent },
   { path: 'about', component: AboutViewComponent },
+  { path: 'automation', component: AutomatedViewComponent },
   { path: '',
     redirectTo: '/bluetooth',
     pathMatch: 'full'
@@ -33,8 +35,10 @@ const appRoutes: Routes = [
     AppComponent, SidenavListComponent, 
     BluetoothViewComponent, 
     RemoteControlViewComponent, 
+    RemoteControlComponent,
     VideoViewComponent, 
-    AboutViewComponent
+    AboutViewComponent,
+    AutomatedViewComponent
   ],
   imports: [
     BrowserModule,
