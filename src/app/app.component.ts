@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  selecteditem = {};
+  menuitems = [{
+    name: 'Bluetooth',
+    icon: 'bluetooth',
+    link: 'bluetooth'
+  },{
+    name: 'Remote Control',
+    icon: 'settings_remote',
+    link: 'remote'
+  },{
+    name: 'Video',
+    icon: 'videocam',
+    link: 'video'
+  },{
+    name: 'About',
+    icon: 'info',
+    link: 'about'
+  }];
+  
+  
 }
