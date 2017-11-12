@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
-import { MdButtonModule, MdCardModule, MdMenuModule,
-  MdToolbarModule, MdIconModule } from '@angular/material';
+import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { SidenavListComponent } from "./components/common/sidenav-list.component"
 import { RemoteControlComponent } from "./components/remote/remote-control.component"
@@ -32,11 +31,12 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, SidenavListComponent, 
-    BluetoothViewComponent, 
-    RemoteControlViewComponent, 
+    AppComponent,
+    SidenavListComponent,
+    BluetoothViewComponent,
+    RemoteControlViewComponent,
     RemoteControlComponent,
-    VideoViewComponent, 
+    VideoViewComponent,
     AboutViewComponent,
     AutomatedViewComponent
   ],
