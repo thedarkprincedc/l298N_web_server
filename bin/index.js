@@ -3,4 +3,4 @@
 
 const createAppServer = require(__dirname + '/../lib/server.js');
 
-createAppServer(3003, true);
+createAppServer(3003, false);
