@@ -6,8 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
-import { SidenavListComponent } from './components/common/sidenav-list.component'
-import { RemoteControlComponent } from './components/remote/remote-control.component'
+import { SidenavListComponent } from './components/common/sidenav/sidenav-list.component';
+import { RemoteControlComponent } from './components/common/remote-control/remote-control.component';
 
 import { BluetoothViewComponent } from './views/bluetooth-view';
 import { RemoteControlViewComponent } from './views/remote-view';

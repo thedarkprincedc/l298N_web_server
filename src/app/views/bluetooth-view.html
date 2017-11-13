@@ -1,15 +1,15 @@
 <mat-list>
     <h3 md-subheader>Devices</h3>
-    <mat-list-item *ngFor="let item of devices"
+    <mat-card *ngFor="let item of [{name:'ddd'}]"
         [matMenuTriggerFor]="appMenu"
         (click)="selecteddevice=item"
         [ngClass]="{'success' : item.connected == true}">
-        <md-icon md-list-icon>folder</md-icon>
+        <mat-icon mat-list-icon>folder</mat-icon>
         <h4 md-line>{{item.name}}</h4>
-        <p md-line> {{item.deviceid}} {{(item.connected)?"(Paired)":""}}</p>
-    </mat-list-item>
+        <p mat-line> {{item.deviceid}} {{(item.connected)?"(Paired)":""}}</p>
+    </mat-card>
     <mat-divider></mat-divider>
     <mat-menu #appMenu="matMenu">
-        <button md-menu-item (click)="onItemClick(selecteddevice)"> {{ (selecteddevice.connected)? "Disconnect" : "Connect" }} </button>
+<button md-menu-item (click)="onItemClick(selecteddevice)"> {{ (selecteddevice.connected)? "Disconnect" : "Connect" }} </button>
     </mat-menu>
 </mat-list>
