@@ -5,21 +5,21 @@ import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs/Observable';
 @Injectable()
 
-export class BluetoothService{
+export class BluetoothService {
     socket: any;
 
     socketConnected$ = new BehaviorSubject<boolean>(false);
-    constructor(){
+    constructor() {
         this.socket = io(environment.socket.baseUrl, environment.socket.opts);
         this.socket.on('connect', () => this.socketConnected$.next(true));
         this.socket.on('disconnect', () => this.socketConnected$.next(false));
         this.socketConnected$.asObservable().subscribe( connected => {
             console.log('Socket connected: ', connected);
-            //this.socket.emit('send', {msg, usr, frq: this.frq });
+            // this.socket.emit('send', {msg, usr, frq: this.frq });
         });
     }
-    send(msg: Object){
-        if(msg){
+    send(msg: Object) {
+        if (msg) {
             this.socket.emit('bluetooth', msg);
         }
     }
@@ -31,7 +31,7 @@ export class BluetoothService{
             // observable is disposed
             return () => {
                 this.socket.off(event);
-            }  
-        });   
+            };
+        });
     }
 }

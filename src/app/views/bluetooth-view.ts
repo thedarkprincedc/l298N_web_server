@@ -23,19 +23,19 @@ export class BluetoothViewComponent {
 
     devices = [];
     constructor(private _bluetoothService: BluetoothService ) {
-      this.bluetoothStream = this._bluetoothService.listen('bluetooth');
+      this.bluetoothStream = this._bluetoothService.listen('ON_CONNECTED');
       this.bluetoothSub = this.bluetoothStream.subscribe(res => {
         console.log(res);
         if(res){
           this.devices = res;
-        }  
+        }
       });
     }
     onItemClick = function(item){
       item.connected = (item.connected) ? false : true;
       this._bluetoothService.send({
-        msg: (item.connected) ? "pair" : "disconnect", 
-        deviceid: item.deviceid 
+        msg: (item.connected) ? "pair" : "disconnect",
+        deviceid: item.deviceid
       });
     }
 }

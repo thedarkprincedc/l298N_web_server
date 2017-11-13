@@ -6,10 +6,10 @@
 export const environment = {
   production: false,
   socket: {
-    baseUrl: 'http://127.0.0.1:3003',
+    baseUrl: 'http://192.168.1.108:3003',
     opts: {}
   },
   api:{
-    baseUrl: 'http://127.0.0.1:3003'
+    baseUrl: 'http://192.168.1.108:3003'
   }
 };
