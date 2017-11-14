@@ -17,6 +17,7 @@ import {Subscription} from 'rxjs/Subscription';
 })
 
 export class BluetoothViewComponent {
+
     selecteddevice = {};
     bluetoothStream: Observable<any>;
     bluetoothSub: Subscription;
@@ -28,6 +29,9 @@ export class BluetoothViewComponent {
         if (res) {
           this.devices = res;
         }
+      });
+      this._bluetoothService.send({
+        event: 'GET_STATUS'
       });
     }
     onItemClick = function(item){
