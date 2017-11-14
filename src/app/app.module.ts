@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
-import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatIconModule, MatSidenavModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { SidenavListComponent } from './components/common/sidenav/sidenav-list.component';
 import { RemoteControlComponent } from './components/common/remote-control/remote-control.component';
@@ -45,9 +45,10 @@ const appRoutes: Routes = [
     MatButtonModule, // Add material components to imports array
     MatCardModule,
     MatMenuModule,
-    MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
+    MatInputModule,
+    MatFormFieldModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

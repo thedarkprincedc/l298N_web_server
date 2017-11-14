@@ -1,15 +1,14 @@
 <div>
-    <form class="example-form">
-        <mat-form-field class="example-full-width">
-            <input mdInput placeholder="Duty CycleA" value="100">
-        </mat-form-field><br/>
-        <mat-form-field class="example-full-width">
-            <input mdInput placeholder="Duty CycleB" value="100">
-        </mat-form-field>
-    </form>
-    <hr/>
-    <button mat-raised-button (click)="forward()">Move Forward</button>
-    <button mat-raised-button (click)="backward()">Move Backward</button>
-    <button mat-raised-button (click)="rotate('ccw')">Rotate CCW</button>
-    <button mat-raised-button (click)="rotate('cw')">Rotate CW</button>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Duty Cycle">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Power">
+  </mat-form-field>
+  <hr/>
+  <button mat-raised-button (click)="forward()">Move Forward</button>
+  <button mat-raised-button (click)="backward()">Move Backward</button>
+  <button mat-raised-button (click)="rotate('ccw')">Rotate CCW</button>
+  <button mat-raised-button (click)="rotate('cw')">Rotate CW</button>
 </div>
