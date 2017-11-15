@@ -1,0 +1,44 @@
+{
+  "gpio_mode" : "hardware",
+  "motors": [{
+    "a": {
+      "type": "DIGITAL",
+      "number": 11
+    },
+    "b": {
+      "type": "DIGITAL",
+      "number": 15
+    },
+    "c": {
+      "type": "PWM",
+      "number": 23,
+      "": 1000,
+      "dutyCycle": "0"
+    }
+  }, {
+    "a": {
+      "type": "DIGITAL",
+      "number": 16
+    },
+    "b": {
+      "type": "DIGITAL",
+      "number": 18
+    },
+    "c": {
+      "type": "PWM",
+      "number": 23,
+      "": 1000,
+      "dutyCycle": "0"
+    }
+  }],
+  "controller": {
+    "analog1": "direction",
+    "analog2": "direction"
+  },
+  "keyboard": {
+    "w" : "forward",
+    "a" : "left",
+    "s" : "backward",
+    "d" : "right"
+  }
+}

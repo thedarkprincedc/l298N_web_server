@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "nodestart": "node bin/index.js",
-    "nodedev": "nodemon bin/index.js"
+    "nodedev": "nodemon bin/index.js",
+    "noderemote": "sudo /home/pi/n/bin/node --inspect=0.0.0.0:9229 --debug-brk /home/pi/l298N_web_server/bin/index.js"
   },
   "private": true,
   "dependencies": {
