@@ -11,7 +11,7 @@
     },
     "c": {
       "type": "PWM",
-      "number": 33,
+      "number": 37,
       "f": 1000,
       "dutyCycle": 0
     }
