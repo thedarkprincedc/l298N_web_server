@@ -11,9 +11,9 @@
     },
     "c": {
       "type": "PWM",
-      "number": 23,
+      "number": 33,
       "": 1000,
-      "dutyCycle": "0"
+      "dutyCycle": 0
     }
   }, {
     "a": {
@@ -26,9 +26,9 @@
     },
     "c": {
       "type": "PWM",
-      "number": 23,
+      "number": 35,
       "": 1000,
-      "dutyCycle": "0"
+      "dutyCycle": 0
     }
   }],
   "controller": {
