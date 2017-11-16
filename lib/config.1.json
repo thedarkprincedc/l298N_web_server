@@ -3,30 +3,30 @@
   "motors": [{
     "a": {
       "type": "DIGITAL",
-      "number": 11
+      "number": 17
     },
     "b": {
       "type": "DIGITAL",
-      "number": 15
+      "number": 22
     },
     "c": {
       "type": "PWM",
-      "number": 33,
+      "number": 13,
       "f": 1000,
       "dutyCycle": 0
     }
   }, {
     "a": {
       "type": "DIGITAL",
-      "number": 16
+      "number": 23
     },
     "b": {
       "type": "DIGITAL",
-      "number": 18
+      "number": 24
     },
     "c": {
       "type": "PWM",
-      "number": 37,
+      "number": 26,
       "f": 1000,
       "dutyCycle": 0
     }
